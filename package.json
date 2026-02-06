@@ -1,0 +1,22 @@
+{
+  "name": "renovate-config",
+  "type": "module",
+  "version": "0.0.2",
+  "description": "Renovate Config",
+  "author": "lonewolfyx",
+  "license": "MIT",
+  "homepage": "https://github.com/config-preset/renovate-config#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/config-preset/renovate-config.git"
+  },
+  "bugs": "https://github.com/config-preset/renovate-config/issues",
+  "files": [
+    "default.json"
+  ],
+  "packageManager": "pnpm@10.28.2",
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org",
+        "access": "public"
+    }
+}

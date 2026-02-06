@@ -1,0 +1,102 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [
+        "config:recommended",
+        "schedule:weekly",
+        "group:allNonMajor",
+        ":semanticCommitTypeAll(chore)"
+    ],
+    "labels": [
+        "dependencies"
+    ],
+    "rangeStrategy": "bump",
+    "ignoreDeps": [
+        "node"
+    ],
+    "packageRules": [
+        {
+            "matchDepTypes": [
+                "peerDependencies"
+            ],
+            "enabled": false,
+            "description": "忽略 peerDependencies 版本检测"
+        },
+        {
+            "groupName": "ts",
+            "matchPackageNames": [
+                "typescript",
+                "type-fest",
+                "tsx"
+            ]
+        },
+        {
+            "groupName": "eslint",
+            "matchPackagePrefixes": [
+                "eslint",
+                "@antfu/eslint-config"
+            ],
+            "description": "将 eslint 相关合并"
+        },
+        {
+            "groupName": "pinia",
+            "matchPackageNames": [
+                "pinia"
+            ],
+            "matchPackagePrefixes": [
+                "@pinia/"
+            ]
+        },
+        {
+            "groupName": "vueuse",
+            "matchPackagePrefixes": [
+                "@vueuse/"
+            ]
+        },
+        {
+            "groupName": "vite",
+            "matchPackageNames": [
+                "vite",
+                "rollup",
+                "postcss",
+                "sass"
+            ],
+            "matchPackagePrefixes": [
+                "@vitejs/",
+                "unplugin-",
+                "rollup-",
+                "@rollup/"
+            ]
+        },
+        {
+            "groupName": "vitest",
+            "matchPackageNames": [
+                "vitest",
+                "vitest-browser-vue",
+                "playwright",
+                "jsdom"
+            ],
+            "matchPackagePrefixes": [
+                "@vitest/"
+            ]
+        },
+        {
+            "groupName": "nuxt",
+            "matchPackageNames": [
+                "nuxt"
+            ],
+            "matchPackagePrefixes": [
+                "@nuxt/"
+            ],
+            "postUpgradeTasks": {
+                "commands": [
+                    "npx nuxi@latest upgrade --force"
+                ],
+                "fileFilters": [
+                    "pnpm-lock.yaml",
+                    "yarn.lock",
+                    "package-lock.json"
+                ]
+            }
+        }
+    ]
+}
