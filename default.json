@@ -97,6 +97,11 @@
           "package-lock.json"
         ]
       }
+    },
+    {
+      "matchPackageNames": ["typescript"],
+      "allowedVersions": "<7",
+      "description": "允许 typescript 版本小于 7"
     }
   ]
 }
