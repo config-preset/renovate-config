@@ -14,7 +14,7 @@
   "files": [
     "default.json"
   ],
-  "packageManager": "pnpm@10.28.2",
+  "packageManager": "pnpm@12.6.0",
   "publishConfig": {
     "registry": "https://registry.npmjs.org",
     "access": "public"
