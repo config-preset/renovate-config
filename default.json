@@ -100,7 +100,7 @@
     },
     {
       "matchPackageNames": ["typescript"],
-      "allowedVersions": ">=6.0.0 <7.0.0"
+      "allowedVersions": ">=6.0.0 <7.0.0",
       "description": "允许 typescript 版本大于 6 小于 7"
     }
   ]
